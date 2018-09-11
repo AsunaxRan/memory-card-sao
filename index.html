@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sword art online</title>
+	
+	<link rel="icon" type="image/ico" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+	<!-- Preload -->
+	<div id="preload" class="preload-container text-center">
+        <span class="glyphicon glyphicon-repeat preload-icon rotating"></span>
+    </div>
+	<!-- Preload -->
+
+	<div id="snow"></div>
+	<audio id="bgmusic-sound" src="audio/normal.mp3"></audio>
+	<audio id="flip-sound" src="audio/flip.mp3"></audio>
+	<audio id="ten_seconds-sound" src="audio/10s.mp3"></audio>
+	<audio id="five_seconds-sound" src="audio/5s.mp3"></audio>
+	<audio id="correct-sound" src="audio/correct.mp3"></audio>
+	<audio id="incorrect-sound" src="audio/incorrect.mp3"></audio>
+	<audio id="lose-sound" src="audio/lose.mp3"></audio>
+	<audio id="win-sound" src="audio/win.mp3"></audio>
+
+
+	<div class="wrap">
+		<div class="timer">
+			<div class="progressbar">
+				<progress value="" max="">
+			</div>
+		</div> <!-- End .timer -->
+		<div class="content">
+			<!-- <div class="grid">
+				<div class="card" data-id="" onclick="flip(this)">
+					<div class="front"><img src="images/back.jpg" alt=""></div>
+					<div class="back"><img src="images/f10.jpg" alt=""></div>
+				</div>
+			</div> -->
+		</div> <!-- End .content -->
+	</div> 
+
+	<div class="modal begin" style="display: none">
+		<div class="dialog">
+			<h1>Memory card</h1>
+			<h2>Choose play mode</h2>
+			<button class="btn btn-normal" onclick="startGame(1)">Normal</button>
+			<button class="btn btn-hard" onclick="startGame(2)">Hard</button>
+		</div>
+	</div>
+	<div class="modal win" style="display: none">
+		<div class="dialog">
+			<img src="images/win1.png">
+			<section>
+				<h1>You win</h1>
+				<button class="btn btn-reset" onclick="closeModal(); loadContent()">Play again</button>
+			</section>
+		</div>
+	</div>
+	<div class="modal lose" style="display: none">
+		<div class="dialog">
+			<img src="images/lose.png">
+			<section>
+				<h1>You lose</h1>
+				<button class="btn btn-reset" onclick="closeModal(); loadContent()">Play again</button>
+			</section>
+		</div>
+	</div>
+	
+</body>
+</html>

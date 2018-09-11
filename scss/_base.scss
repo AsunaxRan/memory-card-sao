@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+	font-size: 62.5%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	a {text-decoration: none;}
+	ul {list-style-type: none;}
+}
+
+@font-face {
+    font-family: Slabo;
+    src: local('Slabo 27px'),
+    	 url("../fonts/Slabo27px-Regular.ttf")
+    	 format('truetype');
+}
