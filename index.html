@@ -9,13 +9,24 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		$(window).on('load', function() {
+			$('.preloader').fadeOut('fast');
+		});
+	</script>
 
 </head>
 <body>
 	<!-- Preload -->
-	<div id="preload" class="preload-container text-center">
-        <span class="glyphicon glyphicon-repeat preload-icon rotating"></span>
-    </div>
+	<div class="preloader">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+	</div>
 	<!-- Preload -->
 
 	<div id="snow"></div>

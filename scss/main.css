@@ -1,190 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+/*
+Error: Undefined variable: "$color-8".
+        on line 23 of D:/xampp/htdocs/mygame/Memory-cards-SAO/scss/_preloader.scss
+        from line 2 of D:\xampp\htdocs\mygame\Memory-cards-SAO\scss\main.scss
 
-body {
-  overflow: hidden;
-  font-size: 62.5%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-  body a {
-    text-decoration: none; }
-  body ul {
-    list-style-type: none; }
+18: 		padding: 0 10px;
+19: 		progress {
+20: 			width: 100%;
+21: 			height: 15px;
+22: 		}
+23: 	}
+24: 	//border: 1px dashed blue;
+25: }
+26: 
+27: .content {
+28: 	text-align: center;
 
-@font-face {
-  font-family: Slabo;
-  src: local("Slabo 27px"), url("../fonts/Slabo27px-Regular.ttf") format("truetype"); }
-.preloading {
-  overflow: hidden; }
-  .preloading .preload-container {
-    width: 100%;
-    height: 100%;
-    background: #ef6e7e;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding-right: 17px;
-    overflow-x: hidden;
-    overflow-y: auto; }
-    .preloading .preload-container .preload-icon {
-      font-size: 66px;
-      color: #fff;
-      margin-top: 20%; }
-
-#snow {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../images/s1.png"), url("../images/s2.png"), url("../images/s3.png");
-  z-index: 1;
-  animation: snow 10s linear infinite; }
-
-@keyframes snow {
-  0% {
-    background-position: 0 0, 0 0, 0 0; }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px; }
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px; } }
-.modal {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 10; }
-
-.dialog {
-  width: 100%;
-  max-width: 550px;
-  height: auto;
-  background: #fff;
-  z-index: 11;
-  display: block;
-  margin: 100px auto 0 auto;
-  padding: 4em; }
-
-.begin img, .win img, .lose img {
-  display: inline-block;
-  height: auto;
-  text-align: left; }
-.begin h1, .win h1, .lose h1 {
-  font-family: "Times New Roman", serif;
-  font-size: 3.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-  margin: 40px 0; }
-.begin h2, .win h2, .lose h2 {
-  font-size: 2.4em;
-  margin: 10px 0; }
-.begin section, .win section, .lose section {
-  float: right;
-  text-align: center; }
-
-.begin {
-  text-align: center; }
-  .begin h1 {
-    margin: 0; }
-
-.btn {
-  width: 150px;
-  display: inline-block;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin: 5px;
-  border-radius: 3px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-  border-color: transparent;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: .3s ease; }
-  .btn:hover {
-    transform: rotateY(15deg); }
-  .btn-normal {
-    background: #1976d2; }
-    .btn-normal:hover {
-      background: rgba(25, 118, 210, 0.9); }
-  .btn-hard {
-    background: #d32f2f; }
-    .btn-hard:hover {
-      background: rgba(211, 47, 47, 0.9); }
-  .btn-reset {
-    background: #fb8c00; }
-    .btn-reset:hover {
-      background: rgba(251, 140, 0, 0.9); }
-
-.wrap {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto; }
-
-.timer {
-  margin: 30px 0; }
-  .timer .progressbar {
-    text-align: center;
-    padding: 0 10px; }
-    .timer .progressbar progress {
-      width: 100%;
-      height: 15px; }
-
-.content {
-  text-align: center;
-  position: relative;
-  z-index: 5; }
-
-.grid {
-  display: inline-block;
-  float: left;
-  width: 12.5%;
-  padding: 10px; }
-
-.card {
-  position: relative;
-  width: 100%;
-  cursor: pointer; }
-  .card img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 0px 5px 0px rgba(240, 240, 240, 0.75);
-    transition: .3s ease; }
-  .card .back, .card .front {
-    width: 100%;
-    backface-visibility: hidden;
-    transition: .5s all ease; }
-  .card .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotateY(180deg); }
-  .card .front {
-    width: 100%;
-    transform: rotateY(0deg); }
-  .card:hover img {
-    box-shadow: 0px 0px 20px 0px rgba(240, 240, 240, 0.75); }
-
-.flipped {
-  pointer-events: none; }
-  .flipped .back {
-    transform: rotateY(0deg); }
-  .flipped .front {
-    transform: rotateY(-180deg); }
-  .flipped img {
-    box-shadow: 0px 0px 20px 0px rgba(240, 240, 240, 0.75); }
-
-.hiddenC {
-  pointer-events: none !important; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+D:/xampp/htdocs/mygame/Memory-cards-SAO/scss/_preloader.scss:23
+D:\xampp\htdocs\mygame\Memory-cards-SAO\scss\main.scss:2
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$color-8\".\A         on line 23 of D:/xampp/htdocs/mygame/Memory-cards-SAO/scss/_preloader.scss\A         from line 2 of D:\xampp\htdocs\mygame\Memory-cards-SAO\scss\main.scss\A \A 18: 		padding: 0 10px;\A 19: 		progress {\A 20: 			width: 100%;\A 21: 			height: 15px;\A 22: 		}\A 23: 	}\A 24: 	//border: 1px dashed blue;\A 25: }\A 26: \A 27: .content {\A 28: 	text-align: center;"; }
