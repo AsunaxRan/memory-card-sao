@@ -31,7 +31,7 @@ function shuffle(dataArr) {
     }
 
     return dataArr;
-} // OK
+}
 
 function loadContent() {
     var cards = shuffle(dataArr);
@@ -44,20 +44,20 @@ function loadContent() {
     $(".content").html(temp);
     openModal(".begin");
     loadBg();
-} // OK
+}
 
 function loadBg() {
 	var index = Math.floor(Math.random() * 3) + 1;
 	$("body").css('background-image', 'url(images/bg'+index+'.jpg)');
-} // OK
+}
 
 function openModal(item) {
 	$(item).fadeIn();
-} // OK
+}
 
 function closeModal() {
 	$(".modal").hide();
-} // OK
+}
 
 function startGame(item) {
 	//loadContent();
@@ -71,7 +71,7 @@ function startGame(item) {
 	closeModal();
 	playSound("bgmusic");
 	countdown();
-} // OK
+}
 
 function countdown() {
 	remainTime = setInterval(function() {
@@ -89,16 +89,16 @@ function countdown() {
 		console.log(timeleft);
 		timeleft--;
 	}, 1000);
-} // OK
+}
 
 function playSound(item) {
 	document.getElementById(item + '-sound').load();
 	document.getElementById(item + '-sound').play();
-} // OK
+}
 
 function stopSound(item) {
 	document.getElementById(item + '-sound').pause();
-} // OK
+}
 
 function flip(item) {
 	current++;
@@ -138,7 +138,7 @@ function flip(item) {
 		
 		current = 0;
 	}
-} // OK?
+}
 
 
 
@@ -147,14 +147,4 @@ $(document).ready(function() {
 	document.getElementById("correct-sound").volume = .4;
 	document.getElementById("incorrect-sound").volume = .4;
 	loadContent();
-    console.log('document');
-});
-
-
-$(window).on('load', function(event) {
-	// event.preventDefault();
-	$('body').css('overflow', 'auto');
-    $('body').removeClass('preloading');
-    $('#preload').delay(1000).fadeOut('fast');
-    console.log('window');
 });
